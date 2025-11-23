@@ -52,7 +52,7 @@ def handle_single_book(notion: Client):
         books.complete_missing_data(notion, book_id=book_id)
         print("Fertig.")
     except Exception as err:
-        print(f"Fehler beim Aktualisieren: {err}")
+        print(f"Fehler beim Aktualisieren: {type(err)}: {err}")
 
 
 def handle_all_books(notion: Client):
@@ -60,7 +60,7 @@ def handle_all_books(notion: Client):
         books.complete_missing_data(notion)
         print("Fertig.")
     except Exception as err:
-        print(f"Fehler beim Aktualisieren: {err}")
+        print(f"Fehler beim Aktualisieren: {type(err)}: {err}")
 
 
 def main():
